@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>Music App</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Swiper Js CSS and JS -->
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+   
+    <!-- Javascript  -->
+    <script  type="module" src="script.js" defer></script>
+
+    <!-- Ionicon Script -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" defer></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" defer></script>
+</head>
+<body >
+    <header class="flex-column">
+        <div class="mobile-nav-toggle">
+            <span class="sr-only">Menu</span>
+            <div class="bar bg-white"></div>
+            <div class="bar bg-white"></div>
+        </div>
+        <div class="logo">
+            <img src="images/logo.svg" alt="Music logo">
+        </div>
+        <form class="flex-column" action="">
+            <label for="search">
+                <ion-icon class="text-grey" name="search-outline"></ion-icon>
+            </label>
+            <input type="search" placeholder="search artist">
+        </form>
+
+        <nav class="flex-row">
+            <ul class="menu-list flex-row  bg-dark-alt">
+                <li class="text-grey current">
+                    <span><ion-icon class="menu-icon" name="home-sharp"></ion-icon></span>
+                    <span class="menu-item">Home</span>
+                </li>
+                <li class="text-grey">
+                    <span><ion-icon class="menu-icon" name="albums-sharp"></ion-icon></i></span>
+                    <span class="menu-item">My collections</span>
+                </li>
+                <li class="text-grey">
+                    <span><ion-icon class="menu-icon" name="radio-sharp"></ion-icon></i></span>
+                    <span class="menu-item">Radio</span>
+                </li>
+                <li class="text-grey">
+                    <span><ion-icon class="menu-icon" name="videocam-sharp"></ion-icon></i></span>
+                    <span class="menu-item">Music Video</span>
+                </li>
+            </ul>
+
+            <ul class="menu-list flex-row bg-dark-alt">
+                <li class="text-grey">
+                    <span><ion-icon class="menu-icon" name="person"></ion-icon></i></span>
+                    <span class="menu-item">Profile</span>
+                </li>
+                <li class="text-grey">
+                    <span><ion-icon class="menu-icon" name="log-out"></ion-icon></i></span>
+                    <span class="menu-item">Log Out</span>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="">
+        <section class="section-1 container">
+            <div  class="even-columns bg-primary">
+                <article>
+                    <p class="fs-200">Current playlist</p>
+                    <div>
+                        <h1 class="fs-700">R & B Hits</h1>
+                        <p class="fs-300">All mine, Lie again, Petty call me everyday,
+                            Out of time, No love, Bad habit,
+                            and so much more</p>
+                    </div>
+                    <div class="flex-column">
+                        <img src="images/people-overly.svg" alt="artists">
+                        <img src="images/solid-heart.svg" alt="Solid heart icon">
+                        <p class="fs-300">33k Likes</p>
+                    </div>
+                </article>
+                <picture>
+                    <img src="images/Eric Esma.png" alt="Artist holding Microphone">
+                </picture>
+            </div>
+            
+            <div class="flex-row">
+                <h2 class="text-light fs-600 fw-bold">Top charts</h2>
+                <div class="flex-column bg-dark-alt">
+                    <picture>
+                        <img src="images/Rectangle 17.png" alt="Album Image">
+                    </picture>
+                    <div  class="chart-details">
+                        <h3 class="fs-400">Golden age of 80s</h3>
+                        <p class="fs-200 text-grey">Sean swadder</p>
+                        <p class="fs-200">2:34:45</p>
+                    </div>
+                    <img src="images/light-heart.svg" alt="Light heart icon">
+                </div>
+
+                <div class="flex-column bg-dark-alt">
+                    <picture>
+                        <img src="images/Rectangle 17 (2).png" alt="Album Image">
+                    </picture>
+                    <div class="chart-details">
+                        <h3 class="fs-400">Reggae "n" blues</h3>
+                        <p class="fs-200 text-grey">Dj YK mule</p>
+                        <p class="fs-200">1:02:42</p>
+                    </div>
+                    <img src="images/light-heart.svg" alt="Light heart icon">
+                </div>
+
+                <div class="flex-column bg-dark-alt">
+                    <picture>
+                        <img src="images/Rectangle 17(3).png" alt="Album Image">
+                    </picture>
+                    <div class="chart-details">
+                        <h3 class="fs-400">Tomorrow's tunes</h3>
+                        <p class="fs-200 text-grey">Obi Datti</p>
+                        <p class="fs-200">2:01:25</p>
+                    </div>
+                    <img src="images/light-heart.svg" alt="Light heart icon">
+                </div>
+
+            </div>
+        </section>
+
+        <section class="carousel ccc margin-block-2">
+            <h2 class="fs-600 text-light padding-block-1">New releases</h2>
+            <div class="swiper">
+                <div class="swiper-wrapper" id="new-release">
+                
+                </div>
+            </div>
+          </section>
+
+          <section class="carousel">
+            <h2 class="fs-600 text-light padding-block-1">Popular</h2>
+            <div class="swiper">
+                <div class="swiper-wrapper" id="popular">
+                    
+                </div>
+            </div>
+          </section>
+    </main>
+
+    
+       
+        
+</body>
+</html>
