@@ -1,5 +1,5 @@
 import {newRelease} from "./data.js";
-import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js';
+// import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js';
 
 
 
@@ -13,10 +13,10 @@ navToggle.addEventListener("click", ()=>{
     navToggle.toggleAttribute("data-opened");
 })
 
-menu.addEventListener("click", ()=>{
-    menu.classList.remove("active");
-    menuBar.classList.remove("active")
-})
+// menuList.addEventListener("click", ()=>{
+//     menu.classList.remove("active");
+//     menuBar.classList.remove("active")
+// })
 
   const swiper = new Swiper('.swiper', {
     slidesPerView: "auto",
@@ -24,18 +24,105 @@ menu.addEventListener("click", ()=>{
     freeMode: true,
     keyboard: {
       enabled: true,
-    },
-  //   breakpoints: {
-  //     835: {
-  //       slidesPerView: 4
-  //     },
-  //     1300: {
-  //       slidesPerView: 4
-  //     }
-  // }
+    }
   });
 
 
+
+//    function arr () {
+
+//     'use strict';
+  
+//     // breakpoint where swiper will be destroyed
+//     // and switches to a dual-column layout
+//     const breakpoint = window.matchMedia( '(min-width: 37em)' );
+  
+//     // keep track of swiper instances to destroy later
+//     let mySwiper;
+  
+  
+//     const breakpointChecker = function() {
+  
+//       // if larger viewport and multi-row layout needed
+//       if ( breakpoint.matches === true ) {
+  
+//         // clean up old instances and inline styles when available
+//       if ( mySwiper !== undefined ) mySwiper.destroy( true, true );
+  
+//       // or/and do nothing
+//       return;
+  
+//         // else if a small viewport and single column layout needed
+//         } else if ( breakpoint.matches === false ) {
+  
+//           // fire small viewport version of swiper
+//           return enableSwiper();
+  
+//         }
+  
+//     };
+    
+
+  
+//     const enableSwiper = function() {
+  
+//       mySwiper = new Swiper ('.swiper-container', {
+  
+//         loop: true,
+        
+//         slidesPerView: 'auto',
+  
+//         centeredSlides: true,
+  
+//         a11y: true,
+//         keyboardControl: true,
+//         grabCursor: true,
+  
+//         // pagination
+//         pagination: '.swiper-pagination',
+//         paginationClickable: true,
+  
+//       });
+  
+//     };
+  
+//     // keep an eye on viewport size changes
+//     breakpoint.addListener(breakpointChecker);
+  
+//     // kickstart
+//     breakpointChecker();
+  
+  
+  
+//   }
+
+// arr();
+
+
+
+
+
+
+
+
+
+
+
+
+//   const swiper = new Swiper('.swiper', {
+//     // Optional parameters
+//     direction: 'horizontal',
+//     slidesPerView: "auto",
+//     spaceBetween: 10,
+//     slidesPerGroup: 1,
+//     loopFillGroupWithBlank: true,
+    
+//     breakpoints: {
+//       660: {
+//         spaceBetween: 30,
+//       }
+//     }
+//   });
 
 
 
@@ -56,7 +143,7 @@ function renderNewRelease(){
         `
     })
 
-    document.querySelectorAll(".swiper-wrapper").forEach((wrapper)=>{
+    document.querySelectorAll(".wrapper-2").forEach((wrapper)=>{
         wrapper.innerHTML = release;
     })
     
@@ -68,49 +155,4 @@ renderNewRelease();
 
 
 
-    // const swiper = new Swiper('.mySwiper', {
-    //   slidesPerView: 3,
-    //   slidesPerColumn: 2,
-    //   spaceBetween: 30,
-    //   pagination: {
-    //     el: '.swiper-pagination',
-    //     clickable: true,
-    //   },
-    // });
-
-
-{/* // let swiper = new Swiper(".swiper", {
-//         slidesPerView: 3,
-//         spaceBetween: 30,
-//         freeMode: true,
-//         pagination: {
-//           el: ".swiper-pagination",
-//           clickable: true,
-//         },
-//       }); */}
-
-
-// FORMATTING SLIDER 
-// const swiper = new Swiper('.swiper', {
-//   // Optional parameters
-//   direction: 'horizontal',
-//   slidesPerView: 5,
-//   spaceBetween: 30,
-//   slidesPerGroup: 5,
-//   loopFillGroupWithBlank: true,
-//   pagination: {
-//     el: ".swiper-pagination",
-//     clickable: true,
-//   }
-// //   breakpoints: {
-// //     600: {
-// //       slidesPerView: 2,
-// //     },
-// //     960: {
-// //       slidesPerView: 3
-// //     },
-// //     1300: {
-// //       slidesPerView: 4
-// //     }
-// //   }
-// });
+    
