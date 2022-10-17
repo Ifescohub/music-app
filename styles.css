@@ -255,6 +255,10 @@ form input{
   outline: none;
 }
 
+form label ion-icon{
+  font-size: 20px;
+}
+
 nav{
   --column-gap: 2rem;
   position: fixed;
@@ -297,7 +301,7 @@ nav{
 }
 
 
-@media (max-width: 37em){
+@media (max-width: 39em){
   header{
     padding-block: 1.5rem;
     padding-inline: 3.5rem 1rem;
@@ -421,16 +425,22 @@ main{
   animation: slideUp 1s ease-in-out;
 }
 
-.section-1 > *:last-child{
-  flex-basis: 100%;
-  align-items: stretch;
-  justify-content: stretch;
+
+.section-1 > *:last-child .swiper-1 {
+  width: 100%;
+  height: fit-content;
 }
 
-.section-1 > *:last-child > div{
+.section-1 > *:last-child .wrapper-1{
+  flex-wrap: wrap;
+  gap: 1rem;
+ }
+
+.section-1 > *:last-child .swiper-slide{
   justify-content: space-between;
   padding: 0.5rem;
   border-radius: 1rem;
+  height: min-content;
  }
 
 .section-1 > *:last-child .chart-details{
@@ -443,33 +453,38 @@ main{
   padding: 0.35rem
 }
 
+
 @media (max-width: 51.5em){
   .section-1{
-    display: grid;
-    grid-auto-flow: row;
-    grid-auto-columns: unset;
-    gap: 1rem;
+    display: block;
+  }
+
+  .section-1 > *:last-child{
+    position: relative;
+    padding-block-start: 2rem;
   }
 }
 
-@media(max-width: 37em){
+
+@media(max-width: 39em){
   main{
     width: 98.5vw;
     padding-inline-start: 0;
   }
 
+
   .section-1 > *:first-child{
     background-position: top right;
     background-size: 50%;
-    min-height: 50vh;
+    max-width: 100vw;
   }
   
   .section-1 > *:first-child article{
-    padding: 2rem;
+    justify-content: flex-start;
   }
 
   .section-1 > *:first-child article > *:nth-child(2){
-    transform: translateY(70%)
+    margin-block: 12rem 4rem
   }
   
   .section-1 > *:first-child picture{
@@ -477,16 +492,23 @@ main{
   }
   
   .section-1 > *:last-child{
-    flex-basis: 100%;
-    align-items: stretch;
-    justify-content: stretch;
+    max-width: 100%;
+    position: relative;
   }
+
+  .swiper-1{
+    width: 100%;
+    height: fit-content;
+  }
+
+  .section-1 > *:last-child .wrapper-1{
+    flex-wrap: nowrap;
+    gap: 0;
+   }
   
-  .section-1 > *:last-child > div{
+  .section-1 > *:last-child .swiper-slide{
     padding: 1rem;
     border-radius: 1rem;
-    width: 18rem;
-    margin: auto;
    }
   
   .section-1 > *:last-child .charts{
@@ -495,7 +517,7 @@ main{
   }
 
   .section-1 > *:last-child .charts img{
-    width: 7rem
+    width: max(7rem, 30%);
   }
 
   .section-1 > *:last-child .charts .chart-details *{
@@ -507,13 +529,20 @@ main{
     align-self: flex-start;
     width: 3rem
   }
+
+  .swiper-1 .swiper-slide:nth-child(1n){
+    width: 55%;
+  }
+    
 }
 
-@media(max-width: 42.5em){
-  main{
-    margin-inline-start: 0;
+@media(max-width: 30em){
+  .swiper-1 .swiper-slide:nth-child(1n) {
+    width: 70%;
   }
 }
+
+
 
 
 
@@ -522,30 +551,30 @@ main{
   position: relative;
 }
 
-.swiper {
+.swiper-2 {
   width: 100%;
   height: fit-content;
 }
 
 
-.swiper-slide:nth-child(1n) {
+.carousel .swiper-slide:nth-child(1n) {
   width: 13%;
 }
 
 @media(max-width: 52.5em){
-  .swiper-slide:nth-child(1n) {
+  .carousel .swiper-slide:nth-child(1n) {
     width: 22%;
   }
 }
 
 @media(max-width: 42.5em){
-  .swiper-slide:nth-child(1n) {
-    width: 35%;
+  .carousel .swiper-slide:nth-child(1n) {
+    width: 28%;
   }
 }
 
 @media(max-width: 27.5em){
-  .swiper-slide:nth-child(1n) {
+  .carousel .swiper-slide:nth-child(1n) {
     width: 47%;
   }
 }

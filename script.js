@@ -18,7 +18,7 @@ navToggle.addEventListener("click", ()=>{
 //     menuBar.classList.remove("active")
 // })
 
-  const swiper = new Swiper('.swiper', {
+  const swiper = new Swiper('.swiper-2', {
     slidesPerView: "auto",
     spaceBetween: 30,
     freeMode: true,
@@ -29,74 +29,82 @@ navToggle.addEventListener("click", ()=>{
 
 
 
-//    function arr () {
+(function() {
 
-//     'use strict';
+    'use strict';
   
-//     // breakpoint where swiper will be destroyed
-//     // and switches to a dual-column layout
-//     const breakpoint = window.matchMedia( '(min-width: 37em)' );
+    // breakpoint where swiper will be destroyed
+    // and switches to a dual-column layout
+    const breakpoint = window.matchMedia( '(min-width: 39em)' );
   
-//     // keep track of swiper instances to destroy later
-//     let mySwiper;
+    // keep track of swiper instances to destroy later
+    let mySwiper;
   
+    //////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////
   
-//     const breakpointChecker = function() {
+    const breakpointChecker = function() {
   
-//       // if larger viewport and multi-row layout needed
-//       if ( breakpoint.matches === true ) {
+      // if larger viewport and multi-row layout needed
+      if ( breakpoint.matches === true ) {
   
-//         // clean up old instances and inline styles when available
-//       if ( mySwiper !== undefined ) mySwiper.destroy( true, true );
+        // clean up old instances and inline styles when available
+        if ( mySwiper !== undefined ) mySwiper.destroy( true, true );
   
-//       // or/and do nothing
-//       return;
+        // or/and do nothing
+        return;
   
-//         // else if a small viewport and single column layout needed
-//         } else if ( breakpoint.matches === false ) {
+        // else if a small viewport and single column layout needed
+        } else if ( breakpoint.matches === false ) {
   
-//           // fire small viewport version of swiper
-//           return enableSwiper();
+          // fire small viewport version of swiper
+          return enableSwiper();
   
-//         }
+        }
   
-//     };
+    };
     
-
+    //////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////
   
-//     const enableSwiper = function() {
+    const enableSwiper = function() {
   
-//       mySwiper = new Swiper ('.swiper-container', {
+      mySwiper = new Swiper ('.swiper-1', {
+        // a11y: true,
+        // grabCursor: true,
+        // direction: "horizontal",
+        // slidesPerView: "auto",
+        // spaceBetween: 20,
+        // freeMode: true,
+        // keyboard: {
+        //   enabled: true,
+        // }
   
-//         loop: true,
-        
-//         slidesPerView: 'auto',
+          slidesPerView: "auto",
+          spaceBetween: 30,
+          freeMode: true,
+          keyboard: {
+            enabled: true,
+          }
+      });
   
-//         centeredSlides: true,
+    };
   
-//         a11y: true,
-//         keyboardControl: true,
-//         grabCursor: true,
+    //////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////
   
-//         // pagination
-//         pagination: '.swiper-pagination',
-//         paginationClickable: true,
+    // keep an eye on viewport size changes
+    breakpoint.addListener(breakpointChecker);
   
-//       });
-  
-//     };
-  
-//     // keep an eye on viewport size changes
-//     breakpoint.addListener(breakpointChecker);
-  
-//     // kickstart
-//     breakpointChecker();
+    // kickstart
+    breakpointChecker();
   
   
   
-//   }
-
-// arr();
+  })(); /* IIFE end */
 
 
 
